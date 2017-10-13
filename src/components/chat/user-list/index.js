@@ -6,14 +6,10 @@ import User from '../user';
 export default class App extends React.Component {
     render () {
         return (
-           <ul className="chatonline style-none ">
-                <User />
-                <User />
-                <User />
-                <User />
-                <User />
-                <User />
-                <User />
+           <ul className="user-list clearfix">
+                {this.props.users.map(item => 
+                    <User key={item.id} user={item}/>
+                )}
            </ul>
         )
     }

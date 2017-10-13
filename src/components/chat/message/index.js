@@ -5,13 +5,12 @@ import './item.scss';
 export default class App extends React.Component {
     render () {
         return (
-            <li>
-                <div className="chat-img"><img src="../assets/images/users/1.jpg" alt="user" /></div>
-                <div className="chat-content">
-                <h5>James Anderson</h5>
-                <div className="box bg-light-info">Lorem Ipsum is simply dummy text of the printing & type setting industry.</div>
+            <li className="message right">
+                <div className="avatar"><img src="" alt="user" /></div>
+                <div className="text_wrapper">
+                    <div className="box bg-light-info">{this.props.message}</div>
                 </div>
-                <div className="chat-time">10:56 am</div>
+                <div className="time">10:56 am</div>
             </li>
         )
     }

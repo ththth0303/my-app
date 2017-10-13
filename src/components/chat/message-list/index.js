@@ -7,17 +7,10 @@ import './message-list.scss'
 export default class App extends React.Component {
     render () {
         return (
-            <ul className="chat-list">
-                <Item />
-                <Item />
-                <Item />
-                <Item />
-                <Item />
-                <Item />
-                <Item />
-                <Item />
-                <Item />
-                <Item />
+            <ul className="messages">
+                {this.props.messages.map(item =>
+                    <Item key={item.id} user={item.userId == this.props.user? true: false} message={item.message}/>
+                )}   
             </ul>
         )
     }
